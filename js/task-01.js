@@ -1,16 +1,10 @@
 const allElemId = document.querySelectorAll(".item");
-const allElem = allElemId.length;
 
-console.log(`Number of categories: ${allElem}`);
+console.log(`Number of categories:`, allElemId.length);
 
 //!! =============================================
 
  allElemId.forEach(element => {
-    const elemTitle = element.querySelector("h2").textContent;
-
-    const findElemTitle = element.querySelectorAll("li");
-    const findElemTitleQs = findElemTitle.length;
-
-    console.log(`Category: ${elemTitle}`);
-    console.log(`Elements: ${findElemTitleQs}`);
+    console.log(`Category:`, element.firstElementChild.textContent);
+    console.log(`Elements:`, element.querySelectorAll("li").length);
 });

@@ -9,14 +9,20 @@ const ingredients = [
 
 const ulElem = document.querySelector("#ingredients");
 
-for (const ingredient of ingredients) {
-  const liElem = document.createElement("li");
-
-  liElem.textContent = ingredient;
+ function vegetables() {
+  return ingredients.map(ingredient => {
+    const liElem = document.createElement("li");
   
-  liElem.classList.add("item");
+    liElem.textContent = ingredient;
+    
+    liElem.classList.add("item");
 
-  ulElem.appendChild(liElem);
+    return liElem;
+  });
 }
+  
+const listElem = vegetables();
+
+ulElem.append(...listElem);
 
 console.log(ulElem);

@@ -11,6 +11,6 @@ form.addEventListener("submit", (event) => {
        return alert("Все поля должны быть заполнены");
     } else {
         console.log(`Email: ${email.value}, Password: ${password.value}`);
-        form.reset();
+        event.currentTarget.reset();
     }
 });
