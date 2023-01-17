@@ -10,7 +10,8 @@ form.addEventListener("submit", (event) => {
     if(email.value === "" || password.value === "") {
        return alert("Все поля должны быть заполнены");
     } else {
-        console.log(`Email: ${email.value}, Password: ${password.value}`);
+        const formData = {"email": email.value, "password": password.value};
+        console.log(formData);
         event.currentTarget.reset();
     }
 });
